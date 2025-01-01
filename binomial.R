@@ -31,9 +31,10 @@
 #'   However, it is hard to see how *fewer* value sets should be consistent than
 #'   expected at random. This suggests a one-tailed test.
 #'
-#' @returns Tibble (data frame). See [`broom::tidy.htest()`] for the meaning of
-#'   column names. However, note that the present test is one-sided by default,
-#'   and a `conf.level` column is added to mirror the `conf.level` argument.
+#' @returns Tibble (data frame). See [`broom::tidy.htest()`], section *Value*,
+#'   for the meaning of column names. However, note that the present test is
+#'   one-sided by default (despite what `p.value` says), and a `conf.level`
+#'   column is added here to mirror the `conf.level` argument.
 #'
 #' @export
 #'
