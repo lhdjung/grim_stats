@@ -17,16 +17,17 @@
 #' @details This conducts a one-tailed test by default (`alternative =
 #'   "greater"`), unlike the underlying [`stats::binom.test()`] function. The
 #'   idea is to assess whether more means are GRIM-consistent with their sample
-#'   sizes than expected, with the null hypothesis representing a random choice
-#'   of decimal digits for the means.
+#'   sizes than expected given the baseline [probability of GRIM
+#'   inconsistency](https://lhdjung.github.io/scrutiny/articles/grim.html#the-probability-of-grim-inconsistency)
+#'   for means with random decimal digits. The *number* of decimal places is
+#'   given (as is the sample size); only the specific digits occupying the
+#'   decimal places are assumed to be random.
 #'
 #'   As any correct value set is GRIM-consistent, the key question is whether a
-#'   collection of them can be sufficiently distinguished from random given the
-#'   baseline [probability of GRIM
-#'   inconsistency](https://lhdjung.github.io/scrutiny/articles/grim.html#the-probability-of-grim-inconsistency).
-#'   In this way, even if some value sets are inconsistent, there may still be a
-#'   trend towards consistency because correct value sets would bias the
-#'   distribution in this direction.
+#'   collection of them can be sufficiently distinguished from random. In this
+#'   way, even if some value sets are inconsistent, there may still be a trend
+#'   towards consistency because correct value sets would bias the distribution
+#'   in this direction.
 #'
 #'   However, it is hard to see how *fewer* value sets should be consistent than
 #'   expected at random. This suggests a one-tailed test.
